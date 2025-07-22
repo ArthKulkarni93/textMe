@@ -11,7 +11,7 @@ const LandingPage: React.FC = () => {
   useEffect(() => {
     // If the shared connection doesn't exist or is closed, create it.
     if (!ws.current || ws.current.readyState === WebSocket.CLOSED) {
-      ws.current = new WebSocket("ws://localhost:3001");
+      ws.current = new WebSocket("https://textme-fksj.onrender.com");
     }
 
     const socket = ws.current;
