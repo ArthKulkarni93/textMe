@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ws } from "../Websocket"; // Import the same shared WebSocket object
 
 function ChatPage() {
-  const { roomId } = useParams();
+  // const { roomId } = useParams();
   const [messages, setMessages] = useState<{ from: string; text: string }[]>([]);
   const [input, setInput] = useState("");
   const [partnerTyping, setPartnerTyping] = useState(false);
